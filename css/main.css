@@ -1,0 +1,41 @@
+body { margin: 60px auto; width: 60%; }
+
+a { text-decoration: none; color: #999; }
+a:hover { text-decoration: underline; }
+
+p, ul { font-size: 1em; line-height: 1.4em; color: #333; }
+h1, h2, h3, h4, h5, p { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; margin: 0.3em auto; }
+h1 { font-size: 2.3em;  }
+h2 { font-size: 2.0em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 0.8em; }
+
+
+nav ul, footer ul { font-size: 1em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
+nav ul li, footer ul li { display: inline; margin-right: 20px; }
+
+img { height: 270px; border: 1px solid #CCC; margin-top: 25px; display: block; }
+img.gif { height: 180px; }
+footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
+
+.cv-intro { line-height: 1.3em; }
+.sample-item, .home-description { margin-top: 30px; }
+.sample-item p span { font-style: italic; }
+/* works */
+ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
+ul.posts li { list-style: none; }
+
+/* CV */
+.page-content { margin: 40px 0px 40px; }
+.page-content .disclaimer { font-size: 0.7em; font-style: italic; }
+.cv h1 { font-size: 3em; }
+.cv h2 { font-size: 2em; }
+.cv div, .cv .download { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
+.cv span { font-size: .8em; }
+.cv .download { float: right; font-size: .8em; text-transform: uppercase; }
+.cv-body { margin: 30px auto; }
+.cv-job-description-blurb { font-size: .8em; font-style: italic; }
+.cv-job-description-list { font-size: .8em; }
+.cv-work-experience-list > li { margin: 20px auto; }
+.cv-skill-list { list-style: none; font-size: .9em; }
