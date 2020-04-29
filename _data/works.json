@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Draft Machine",
+    "project_url": "https://draftmachine.herokuapp.com",
+    "image_url": "https://res.cloudinary.com/dcupoxygs/image/upload/v1587579413/draft-machine/draftmachine-screenshot.png",
+    "description": "A web application that enables users to create and join custom drafts for rec or fantasy sports leagues which take place in real time."
+  },
+  {
+    "title": "MD Flashcards",
+    "project_url": "https://md-flashcards-ui.herokuapp.com",
+    "image_url": "https://res.cloudinary.com/dcupoxygs/image/upload/v1588118223/md-flashcards/sample-a.png",
+    "description": "For me, flashcards are an incredibly useful learning tool, but when it comes to learning new software technologies, I get very limited mileage out of currently existing flashcard apps due to their lack of support for Markdown code snippets. The backend for MD Flashcards is the first API I've written in Elixir/Phoenix, and the app has incidentally been a great help in bootstrapping my own Elixir learning journey."
+  },
+  {
+    "title": "React Timepicker Lite",
+    "project_url": "https://codesandbox.io/s/react-time-picker-lite-example-ikk4y",
+    "image_url": "https://res.cloudinary.com/dcupoxygs/image/upload/v1576104565/react-time-picker/demo3.gif",
+    "description": "A lightweight timepicker widget for React (published as an NPM package) that aims to prevent invalid input as early as possible. Triggers an onSuccess hook when unfocussed with valid input that provides an HH:mm timestring."
+  }
+]

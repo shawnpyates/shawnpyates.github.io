@@ -2,34 +2,15 @@
 layout: default
 title: Shawn Yates -- Works
 ---
-<div class="posts page-content">
+<div class="page-content">
   <h3>Work Samples</h3>
   <p class="disclaimer">*note that Heroku-hosted pages will likely take a minute to initialize</p>
-
-  <div class="sample-item">
-    <h4>Draft Machine</h4>
-    <a href="https://draftmachine.herokuapp.com" target="_blank">
-      <img
-        src="https://res.cloudinary.com/dcupoxygs/image/upload/v1587579413/draft-machine/draftmachine-screenshot.png"
-      />
-    </a>
-    <p>A web application that enables users to create and join custom drafts for rec or fantasy sports leagues which take place in real time.</p>
-  </div>
-  <div class="sample-item">
-    <h4>MD Flashcards</h4>
-    <a href="https://md-flashcards-ui.herokuapp.com" target="_blank">
-      <img
-        href="https://md-flashcards-ui.herokuapp.com"
-        src="https://res.cloudinary.com/dcupoxygs/image/upload/v1588118223/md-flashcards/sample-a.png"
-      />
-    </a>
-    <p>For me, flashcards are an incredibly useful learning tool, but when it comes to learning new software technologies, I get very limited mileage out of currently existing flashcard apps due to their lack of support for Markdown code snippets. The backend for MD Flashcards is the first API I've written in Elixir/Phoenix, and the app has incidentally been a great help in bootstrapping my own Elixir learning journey.</p>
-  </div>
-  <div class="sample-item">
-    <h4>React Timepicker Lite</h4>
-    <a href="https://codesandbox.io/s/react-time-picker-lite-example-ikk4y" target="_blank">
-      <img class="gif" src="https://res.cloudinary.com/dcupoxygs/image/upload/v1576104565/react-time-picker/demo3.gif" />
-    </a>
-    <p>A lightweight timepicker widget for React (published as an NPM package) that aims to prevent invalid input as early as possible. Triggers an <span>onSuccess</span> hook when unfocussed with valid input that provides an <span>HH:mm</span> timestring.</p>
-  </div>
+  {% for project in site.data.works %}
+    <div class="sample-item">
+      <a href="{{ project.project_url }}">
+        <img src="{{ project.image_url }}" />
+      </a>
+      <p>{{ project.description }}</p>
+    </div>
+  {% endfor %}
 </div>

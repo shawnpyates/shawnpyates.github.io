@@ -3,91 +3,61 @@ layout: default
 title: Shawn Yates -- CV
 ---
 
-	<div class="cv page-content">
-		<a href="https://res.cloudinary.com/dcupoxygs/image/upload/v1588183769/pdfs/shawnyates_cv_apr2020e.pdf" class="download" title="Download CV as PDF">Download CV</a>			
-					<h3>Shawn Yates</h3>
-					<div class="cv-intro">
-						<strong>Full Stack Software Developer</strong><br>
-						Surrey, BC<br>
-						Tel: (778) 581-2927<br>
-						<span class="obfuscate">yates.shawnp@gmail.com</span>
-					</div>
-
-					<div class="cv-body">
-
-					<h4>Experience</h4>
-
-					<ul class="cv-work-experience-list">
-						<li>
-							<p><strong>React Developer</strong></p>
-							<p>Eventbase Technology (Vancouver, BC)</p>
-							<p>January 2020-present</p>
-							<p class="cv-job-description-blurb">Mobile technology platform hosting events for premium brands.</p>
-						<p>Responsibilities: </p>
-						<ul class="cv-job-description-list">
-							<li><p>Eventbase Manager: a CMS-like tool that enables event-specific configuration of our mobile app instances. Contributions thus far have included React refactoring (from AngularJS legacy), replacement of class-based components and Redux architecture with hooks-based implementations, unit tests and Storybook components, and user interaction tracking.</p></li>
-							<li><p>Regularly scheduled mentoring and code reviews with junior developers.</p></li>
-						</ul>
-						<li>
-						<p><strong>Software Engineer</strong></p>
-						<p>Finn AI (Vancouver, BC)</p>
-						<p>July 2017-October 2019</p>
-						<p class="cv-job-description-blurb">FinTech SaaS startup developing an AI-powered conversational banking assistant (chatbot).</p>
-						<p>Responsibilities: </p>
-						<ul class="cv-job-description-list">
-							<li><p>Bot Backend: Core business logic for banking assistant, building APIs, third-party API integration, database integration (NodeJS, Express, REST API, Jest, PostgreSQL, Sequelize)</p></li>
-							<li><p>Chat SDK: In-house chat platform frontend (React/Redux, React Native, Styled Components, MQTT, Jest/Enzyme, Storybook, APNS, Firebase)</p></li>
-							<li><p>Business Metrics Reporting: customer journey analytics tracking (NodeJS, Cloudwatch, Kinesis, AWS Lambda, Elasticsearch, Kibana, Google DLP)</p></li>
-							<li><p>Analytics Curator Tool (Python, ElasticSearch, Jenkins)</p></li>
-							<li><p>Conversational Product Recommender Feature</p></li>
-							<li><p>Third-Party Authentication (NodeJS, OAuth)</p></li>
-							<li><p>Express API Gateway</p></li>
-						</ul>
-						</li>
-					<li>
-
-						<p><strong>English Language Teacher/Head Teacher Trainer</strong></p>
-						<p>Gyeonggi English Village (Paju, South Korea)</p>
-						<p>July 2010-April 2016</p>
-					</li>
-					</ul>
-
-					<h4>Education</h4>
-
-					<ul class="cv-work-experience-list">
-						<li>
-							<p><strong>Lighthouse Labs (Vancouver, BC)</strong></p>
-							<p>Web Development Bootcamp, 2017</p>
-						</li>
-						<li>
-							<p><strong>University of British Columbia (Vancouver, BC)</strong></p>
-							<p>Bachelor of Arts in Linguistics, 2008</p>
-						</li>
-					</ul>
-	
-					<h4>Skills</h4>
-					<ul class="cv-skill-list">
-						<li>
-							<p><strong>PROGRAMMING LANGUAGES</strong>: JavaScript (ES6), Elixir, SQL, HTML, CSS/SCSS, TypeScript, Ruby, Python</p>
-						</li>
-						<li>
-							<p><strong>FRAMEWORKS/LIBRARIES</strong>: NodeJS/Express, React, React Native, Redux, Phoenix, Rails, jQuery</p>
-						</li>
-						<li>
-							<p><strong>BUILD TOOLS</strong>: Webpack, Babel, Jenkins, CircleCI, Docker, AWS</p>
-						</li>
-						<li>
-							<p><strong>TESTING</strong>: Jest, Enzyme, ExUnit, AVA, Mocha/Chai, RSpec</p>
-						</li>
-						<li>
-							<p><strong>DATA</strong>: PostgreSQL, MongoDB, GraphQL, Redis, Sequelize, Ecto, ElasticSearch, Kibana</p>
-						</li>
-						<li>
-							<p><strong>IDE</strong>: VS Code, XCode, Android Studio</p>
-						</li>
-						<li>
-							<p><strong>WORK PROCESS</strong>: Git, Agile, Jira, Confluence</p>
-						</li>
-					</ul>
-			</div>
+<div class="cv page-content">
+	<a 
+		href="{{ site.data.cv.downloadable.url }}"
+		class="download"
+		title="{{ site.data.cv.downloadable.title }}"
+	>
+		{{ site.data.cv.downloadable.text }}
+  </a>			
+	<h3>{{ site.data.cv.info.name }}</h3>
+	<div class="cv-intro">
+		<strong>{{ site.data.cv.info.title }}</strong><br>
+		{{ site.data.cv.info.location }} <br>
+		Tel: {{ site.data.cv.info.telephone }}<br>
+		<span class="obfuscate">{{ site.data.cv.info.email }}</span>
 	</div>
+	<div class="cv-body">
+		<h4>Experience</h4>
+		<ul class="cv-experience-list">
+			{% for exp in site.data.cv.work_experience %}
+				<li>
+					<p><strong>{{ exp.title }}</strong></p>
+					<p>{{ exp.company }}</p>
+					<p>{{ exp.time.from }}-{{ exp.time.to }}</p>
+					<p class="cv-job-description-blurb">{{ exp.description }}</p>
+				</li>
+				{% if exp.responsibilities %}
+					<p>Responsibilities: </p>
+					<ul class="cv-job-description-list">
+						{% for item in exp.responsibilities %}
+							<li><p>{{ item }}</p></li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			{% endfor %}
+		</ul>
+		<h4>Education</h4>
+		<ul class="cv-experience-list">
+			{% for school in site.data.cv.education %}
+				<li>
+					<p><strong>{{ school.name }}</strong></p>
+					<p>{{ school.program }}</p>
+				</li>
+			{% endfor %}
+		</ul>
+		<h4>Skills</h4>
+		<ul class="cv-skill-list">
+			{% for category in site.data.cv.skill_list %}
+				<li>
+					<p><strong>{{ category.category_name }}</strong>: 
+						{% for skill in category.skills %}
+							{{ skill }}{% if skill != category.skills.last %}, {% endif %}
+						{% endfor %}
+					</p>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

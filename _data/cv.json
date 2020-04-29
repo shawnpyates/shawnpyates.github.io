@@ -1,0 +1,95 @@
+{
+  "downloadable": {
+    "url": "https://res.cloudinary.com/dcupoxygs/image/upload/v1588183769/pdfs/shawnyates_cv_apr2020e.pdf",
+    "title": "Download CV as PDF",
+    "text": "Download CV"
+  },
+  "info": {
+    "name": "Shawn Yates",
+    "title": "Full Stack Software Developer",
+    "location": "Surrey, BC",
+    "telephone": "(778) 581-2927",
+    "email": "yates.shawnp@gmail.com"
+  },
+  "work_experience": [
+    {
+      "title": "React Developer",
+      "company": "Eventbase Technology (Vancouver, BC)",
+      "time": {
+        "from": "January 2020",
+        "to": "present"
+      },
+      "description": "Mobile technology platform hosting events for premium brands.",
+      "responsibilities": [
+        "Eventbase Manager: a CMS-like tool that enables event-specific configuration of our mobile app instances. Contributions thus far have included React refactoring (from AngularJS legacy), replacement of class-based components and Redux architecture with hooks-based implementations, unit tests and Storybook components, and user interaction tracking.",
+        "Regularly scheduled mentoring and code reviews with junior developers."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Finn AI (Vancouver, BC)",
+      "time": {
+        "from": "July 2017",
+        "to": "October 2019"
+      },
+      "description": "FinTech SaaS startup developing an AI-powered conversational banking assistant (chatbot).",
+      "responsibilities": [
+        "Bot Backend: Core business logic for banking assistant, building APIs, third-party API integration, database integration (NodeJS, Express, REST API, Jest, PostgreSQL, Sequelize)",
+        "Chat SDK: In-house chat platform frontend (React/Redux, React Native, Styled Components, MQTT, Jest/Enzyme, Storybook, APNS, Firebase)",
+        "Business Metrics Reporting: customer journey analytics tracking (NodeJS, Cloudwatch, Kinesis, AWS Lambda, Elasticsearch, Kibana, Google DLP)",
+        "Analytics Curator Tool (Python, ElasticSearch, Jenkins)",
+        "Conversational Product Recommender Feature",
+        "Third-Party Authentication (NodeJS, OAuth)",
+        "Express API Gateway"
+      ]
+    },
+    {
+      "title": "English Language Teacher/Head Teacher Trainer",
+      "company": "Gyeonggi English Village (Paju, South Korea)",
+      "time": {
+        "from": "July 2010",
+        "to": "April 2016"
+      }
+    }
+  ],
+  "education": [
+    {
+      "name": "Lighthouse Labs (Vancouver, BC)",
+      "program": "Web Development Bootcamp, 2017"
+    },
+    {
+      "name": "University of British Columbia (Vancouver, BC)",
+      "program": "Bachelor of Arts in Linguistics, 2008"
+    }
+  ],
+  "skill_list": [
+    {
+      "category_name": "Programming Languages",
+      "skills": ["JavaScript (ES6)", "Elixir", "SQL", "HTML", "CSS/SCSS", "TypeScript", "Ruby", "Python"]
+    },
+    {
+      "category_name": "Frameworks/Libraries",
+      "skills": ["NodeJS/Express", "React", "React Native", "Redux", "Phoenix", "Rails", "jQuery"]
+    },
+    {
+      "category_name": "Build Tools",
+      "skills": ["Webpack", "Babel", "Jenkins", "CircleCI", "Docker", "AWS"]
+    },
+    {
+      "category_name": "Testing",
+      "skills": ["Jest", "Enzyme", "ExUnit", "AVA", "Mocha/Chai", "RSpec"]
+    },
+    {
+      "category_name": "Data",
+      "skills": ["PostgreSQL", "MongoDB", "GraphQL", "Redis", "Sequelize", "Ecto", "ElasticSearch", "Kibana"]
+    },
+    {
+      "category_name": "IDE",
+      "skills": ["VS Code", "XCode", "Android Studio"]
+    },
+    {
+      "category_name": "Work Process",
+      "skills": ["Git", "Agile", "Jira", "Confluence"]
+    }
+  ]
+}
